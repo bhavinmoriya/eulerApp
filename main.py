@@ -36,7 +36,7 @@ st.set_page_config(page_title="Euler Method to solve a 1st order ODE", layout="w
 # Streamlit UI
 st.title("Euler Method for ODEs")
 
-st.write("This app solves the ODE \( \frac{dy}{dt} = -2ty \) with \( y(0) = 1 \) using the Euler method.")
+st.write("This app solves the ODE  $\frac{dy}{dt} = -2ty$  with  y(0) = 1  using the Euler method.")
 
 step_size = st.number_input("Enter the step size (e.g., 0.1):", min_value=0.001, max_value=1.0, value=0.1)
 
