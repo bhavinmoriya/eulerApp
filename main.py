@@ -31,9 +31,10 @@ def euler_method(f, t0, y0, t_end, step_size):
 # Example: Solve dy/dt = -2ty with y(0) = 1
 def f(t, y):
     return -2 * t * y
-
+st.set_page_config(page_title="Euler Method to solve a 1st order ODE", layout="wide")  # Unique browser tab title
 # Streamlit UI
 st.title("Euler Method for ODEs")
+
 st.write("This app solves the ODE \( \frac{dy}{dt} = -2ty \) with \( y(0) = 1 \) using the Euler method.")
 
 step_size = st.number_input("Enter the step size (e.g., 0.1):", min_value=0.001, max_value=1.0, value=0.1)
@@ -46,7 +47,7 @@ t, y_euler = euler_method(f, t0, y0, t_end, step_size)
 
 # Exact solution for comparison: y(t) = exp(-t^2)
 t_exact = [ti for ti in t]
-y_exact = [y0 * (1 - ti**2) for ti in t_exact]  # Approximate exact solution for this ODE
+y_exact = [y0 * np.exp(- ti**2) for ti in t_exact]  # Approximate exact solution for this ODE
 
 # Plot the results
 fig, ax = plt.subplots(figsize=(10, 6))
