@@ -1,5 +1,6 @@
 import streamlit as st
 import matplotlib.pyplot as plt
+import numpy as np
 
 def euler_method(f, t0, y0, t_end, step_size):
     """
