@@ -2,6 +2,8 @@ import streamlit as st
 import matplotlib.pyplot as plt
 import numpy as np
 
+st.set_page_config(page_title="Euler Method to solve a 1st order ODE", layout="wide")  # Unique browser tab title
+
 def euler_method(f, t0, y0, t_end, step_size):
     """
     Solve a first-order ODE using the Euler method.
@@ -32,7 +34,7 @@ def euler_method(f, t0, y0, t_end, step_size):
 # Example: Solve dy/dt = -2ty with y(0) = 1
 def f(t, y):
     return -2 * t * y
-st.set_page_config(page_title="Euler Method to solve a 1st order ODE", layout="wide")  # Unique browser tab title
+
 # Streamlit UI
 st.title("Euler Method for ODEs")
 
