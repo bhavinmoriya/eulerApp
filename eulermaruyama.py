@@ -43,7 +43,7 @@ st.title("Euler-Maruyama Method for SDEs")
 # \mbox{using the Euler-Maruyama method.}""")
 st.latex(r"""
 \text{This app solves the SDE:}
-\quad dX_t = \mu X_t \, dt + \sigma X_t \, dW_t
+\quad dX_t = \mu X_t \, dt + \sigma X_t \, dW_t,
 \quad \text{using the Euler-Maruyama method.}
 """)
 # User inputs
