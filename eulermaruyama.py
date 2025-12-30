@@ -37,8 +37,8 @@ def euler_maruyama(mu, sigma, x0, t0, t_end, step_size, num_simulations=1):
 
 # Streamlit UI
 st.title("Euler-Maruyama Method for SDEs")
-# st.write(r"This app solves the SDE $\( dX_t = \mu X_t \, dt + \sigma X_t \, dW_t \)$ using the Euler-Maruyama method.")
-st.Latex(r"This app solves the SDE $\( dX_t = \mu X_t \, dt + \sigma X_t \, dW_t \)$ using the Euler-Maruyama method.")
+st.write(r"This app solves the SDE $\( dX_t = \mu X_t \, dt + \sigma X_t \, dW_t \)$ using the Euler-Maruyama method.")
+# st.latex(r"This app solves the SDE $\( dX_t = \mu X_t \, dt + \sigma X_t \, dW_t \)$ using the Euler-Maruyama method.")
 
 # User inputs
 col1, col2 = st.columns(2)
