@@ -2,6 +2,7 @@ import streamlit as st
 import numpy as np
 import matplotlib.pyplot as plt
 
+st.set_page_config(page_title="Geometric Brownian Motion Simulator", layout="wide")  # Unique browser tab title
 # App title
 st.title("Geometric Brownian Motion Simulator")
 st.write(
