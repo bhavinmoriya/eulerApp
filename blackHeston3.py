@@ -143,8 +143,7 @@ st.pyplot(fig)
 # Volatility surface (synthetic)
 # ==========================================================
 
-st.subheader("🌈 Volatility Surface (Heston)
-")
+st.subheader("🌈 Volatility Surface (Heston)")
 strikes = np.linspace(70, 130, 20)
 maturities = np.linspace(0.3, 2.0, 10)
 vol_surface = np.zeros((len(maturities), len(strikes)))
