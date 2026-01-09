@@ -43,6 +43,9 @@ if st.button("Calculate"):
         if trajectory[-1] == 6174:
             st.success(f"Kaprekar operation result: {trajectory}")
         else:
-            st.error("Please enter a valid 4-digit number with at least two different digits.")
+            if len(trajectory)==1:
+                st.error("Please enter a valid 4-digit number with at least two different digits.")
+            else:
+                st.success(f"The trajectory is {trajectory} and this number is an exception. Start with another number")
     else:
         st.error("All digits are the same. Please enter a number with at least two different digits.")
