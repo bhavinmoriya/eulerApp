@@ -42,8 +42,6 @@ if st.button("Calculate"):
             trajectory.append(result)
         if trajectory[-1] == 6174:
             st.success(f"Kaprekar operation result: {trajectory}")
-        elif trajectory[-1] == 999:
-            st.success(f"Kaprekar operation result: {trajectory}. The 999 does not lead to 6174. Choose another number.")
         else:
             st.error("Please enter a valid 4-digit number with at least two different digits.")
     else:
