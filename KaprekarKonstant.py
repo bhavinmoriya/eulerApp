@@ -97,11 +97,11 @@ if st.button("Calculate", key="calc_btn_3digit"):
             else:
                 if trajectory ==[number, 99, None]:
                     count=1
-                    result=KaprekarKonstant(990)
-                    trajectory=[number, 999, result]
+                    result=KaprekarKonstant3digit(990)
+                    trajectory=[number, 99, result]
                     while result != 495 and result != None:
                         count+=1
-                        result=KaprekarKonstant(result)
+                        result=KaprekarKonstant3digit(result)
                         trajectory.append(result)
                     st.success(f"Kaprekar operation result: {trajectory}")
     else:
