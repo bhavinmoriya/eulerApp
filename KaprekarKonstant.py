@@ -1,10 +1,11 @@
 import streamlit as st
-st.set_page_config(
-    page_title="Kaprekar Constant Calculator",
-    layout="wide"
-)
+
+st.set_page_config(page_title="Kaprekar Constant Calculator", layout="wide")
+
+
 def checkdigits(x):
     return len(set(str(x))) > 1
+
 
 def KaprekarKonstant(x):
     if checkdigits(x) and len(str(x)) == 4:
@@ -19,33 +20,36 @@ def KaprekarKonstant(x):
     else:
         return None
 
+
 st.title("Kaprekar Constant Calculator")
 st.write("Enter a 4-digit number with at least two different digits.")
 
 number = st.number_input(
-    "Enter your 4-digit number:",
-    min_value=1001,
-    max_value=9998,
-    step=1,
-    format="%d"
+    "Enter your 4-digit number:", min_value=1001, max_value=9998, step=1, format="%d"
 )
 
 if st.button("Calculate"):
     if checkdigits(number):
-        count=1
-        trajectory=[number]
+        count = 1
+        trajectory = [number]
         result = KaprekarKonstant(number)
         trajectory.append(result)
         while result != 6174 and result != None:
-            count+=1
-            result=KaprekarKonstant(result)
+            count += 1
+            result = KaprekarKonstant(result)
             trajectory.append(result)
         if trajectory[-1] == 6174:
             st.success(f"Kaprekar operation result: {trajectory}")
         else:
-            if len(trajectory)==1:
-                st.error("Please enter a valid 4-digit number with at least two different digits.")
+            if len(trajectory) == 1:
+                st.error(
+                    "Please enter a valid 4-digit number with at least two different digits."
+                )
             else:
-                st.success(f"The trajectory is {trajectory} and this number is an exception. Start with another number")
+                st.success(
+                    f"The trajectory is {trajectory} and this number is an exception. Start with another number"
+                )
     else:
-        st.error("All digits are the same. Please enter a number with at least two different digits.")
+        st.error(
+            "All digits are the same. Please enter a number with at least two different digits."
+        )
