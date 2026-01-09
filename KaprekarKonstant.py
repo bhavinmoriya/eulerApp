@@ -39,7 +39,7 @@ number = st.number_input(
     "Enter your a 4-digit number:", min_value=1001, max_value=9998, step=1, format="%d"
 )
 
-if st.button("Calculate"):
+if st.button("Calculate", key="calc_btn_4digit"):
     if checkdigits(number):
         count = 1
         trajectory = [number]
@@ -77,7 +77,7 @@ number = st.number_input(
     "Enter your a 3-digit number:", min_value=100, max_value=998, step=1, format="%d"
 )
 
-if st.button("Calculate"):
+if st.button("Calculate", key="calc_btn_3digit"):
     if checkdigits(number):
         count = 1
         trajectory = [number]
