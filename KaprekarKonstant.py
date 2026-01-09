@@ -35,10 +35,11 @@ if st.button("Calculate"):
         count=1
         trajectory=[number]
         result = KaprekarKonstant(number)
+        trajectory.append(result)
         while result != 6174 and result != None:
             count+=1
-            trajectory.append(result)
             result=KaprekarKonstant(result)
+            trajectory.append(result)
         if trajectory[-1] == 6174:
             st.success(f"Kaprekar operation result: {trajectory}")
         elif trajectory[-1] == 999:
