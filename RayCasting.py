@@ -1,6 +1,7 @@
 import streamlit as st
 import matplotlib.pyplot as plt
 import numpy as np
+plt.style.use("ggplot")
 st.set_page_config(page_title="Ray Casting Algorithm", layout="centered")
 def is_inside(polygon, point):
     """
