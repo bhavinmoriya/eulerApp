@@ -45,7 +45,7 @@ poly = polygon(n)
 poly_closed = poly + [poly[0]]  # Close the polygon
 
 # Generate a random point
-point = (random.randint(1, 10), random.randint(1, 10))
+point = (np.random.randint(1, 10), np.random.randint(1, 10))
 
 # Plot
 fig, ax = plt.subplots()
