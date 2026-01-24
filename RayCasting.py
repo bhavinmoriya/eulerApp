@@ -1,6 +1,6 @@
 import streamlit as st
 import matplotlib.pyplot as plt
-import random
+import numpy as np
 st.set_page_config(page_title="Ray Casting Algorithm", layout="centered")
 def is_inside(polygon, point):
     """
@@ -28,8 +28,8 @@ def polygon(n):
     # Generate a simple polygon (convex hull for simplicity)
     polygon = []
     for i in range(n):
-        x = random.randint(1, 10)
-        y = random.randint(1, 10)
+        x = np.random.randint(1, 10)
+        y = np.random.randint(1, 10)
         polygon.append((x, y))
     # Sort points to avoid self-intersections (simplistic approach)
     polygon.sort()
