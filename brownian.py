@@ -55,3 +55,16 @@ st.subheader("Summary Statistics")
 st.write(f"**Final Positions**: {W[:, -1]}")
 st.write(f"**Mean Final Position**: {np.mean(W[:, -1]):.2f}")
 st.write(f"**Standard Deviation**: {np.std(W[:, -1]):.2f}")
+
+linkedin_url = "https://www.linkedin.com/in/bhavin-moriya-ph-d-b0b88b2/"
+github_url = "https://github.com/bhavinmoriya"
+
+st.markdown("## Connect with me")
+
+col1, col2 = st.columns(2)
+
+with col1:
+    st.link_button("🔗 Follow on LinkedIn", linkedin_url)
+
+with col2:
+    st.link_button("💻 Follow on GitHub", github_url)
